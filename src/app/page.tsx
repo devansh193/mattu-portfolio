@@ -13,12 +13,15 @@ export default function Home() {
   const rotate = useTransform(scrollY, [0, 5000], [30, 360]);
 
   return (
-    <div ref={containerRef} className="relative flex justify-center">
+    <div
+      ref={containerRef}
+      className="relative flex justify-center overflow-x-hidden w-full"
+    >
       <motion.div
         style={{ rotate, originX: 0 }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-40 bg-gradient-to-b from-black   via-[#4118ac] via-50% to-black w-[60%] h-[75%] blur-[100px] rounded-full will-change-transform"
       />
-      <div className="min-h-screen flex flex-col items-center w-full h-full mt-12 md:mt-0">
+      <div className="min-h-screen flex flex-col items-center w-full max-w-full h-full mt-12 md:mt-0">
         <Landing />
         <Work />
         <Testimonials />

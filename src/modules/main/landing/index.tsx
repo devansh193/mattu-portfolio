@@ -4,25 +4,25 @@ import { sampleAvatars } from "@/data";
 
 export const Landing = () => {
   return (
-    <div className="flex w-full flex-col items-center justify-center h-screen px-4 py-2 text-center bg">
-      <div className="relative flex flex-col items-center justify-center h-full w-full max-w-[1000px] mx-auto px-4 text-center gap-y-8">
+    <div className="flex flex-col items-center justify-center h-screen px-4 py-2 text-center">
+      <div className="relative flex flex-col items-center justify-center h-full max-w-[1000px] mx-auto px-4 text-center gap-y-8">
         {/* Gradient backgrounds with noise overlay */}
         <div className="absolute inset-0 flex items-center justify-center space-x-12 -z-10 w-full">
           {/* First gradient with noise */}
-          <div className="relative w-[90%] h-[300px]">
+          <div className="relative max-w-xl w-full h-[300px]">
             <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-black via-[#4118ac] to-black blur-[100px] will-change-transform" />
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay" />
           </div>
 
           {/* Second gradient with noise */}
-          <div className="relative w-[90%] h-[300px]">
+          <div className="relative max-w-xl w-full h-[300px]">
             <div className="absolute inset-0 opacity-40 bg-gradient-to-bl from-black via-[#4118ac] to-black blur-[100px] will-change-transform" />
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay" />
           </div>
         </div>
 
         {/* Twinkling stars */}
-        <div className="absolute inset-0 -z-5 w-full h-full overflow-hidden">
+        <div className="absolute inset-0 -z-5 max-w-3xl mx-auto">
           {Array.from({ length: 40 }).map((_, i) => (
             <div
               key={i}
