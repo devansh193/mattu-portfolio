@@ -4,7 +4,7 @@ import { sampleAvatars } from "@/data";
 
 export const Landing = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen px-4 py-2 text-center">
+    <div className="flex flex-col items-center justify-center h-screen px-4 py-2 text-center ">
       <div className="relative flex flex-col items-center justify-center h-full max-w-[1000px] mx-auto px-4 text-center gap-y-8">
         {/* Gradient backgrounds with noise overlay */}
         <div className="absolute inset-0 flex items-center justify-center space-x-12 -z-10 w-full">
