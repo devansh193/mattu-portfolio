@@ -59,8 +59,7 @@ export const Work = () => {
   const hasMore = visibleCount < data.length;
 
   return (
-    <section className="relative flex flex-col items-center justify-start md:mt-12 pt-12 px-4 overflow-hidden w-full">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 bg-gradient-to-br from-[#000000] via-[#3E2188] to-black w-[75%] h-[70%] rounded-4xl blur-3xl" />
+    <section className="flex flex-col items-center justify-start md:mt-12 pt-12 px-4 overflow-hidden w-full">
       <div className="relative z-10 w-full flex flex-col items-center">
         <h1 className="text-lg md:text-2xl font-bold tracking-wide text-[#808080] mb-4">
           WORKS

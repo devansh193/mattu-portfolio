@@ -2,18 +2,32 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.3);
+  }
+}
+
 /* Custom box shadow for inputs */
-
-
 @theme inline {
   --color-primary: var(--color-neutral-900);
   --shadow-custom:
-      0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
-      0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
 
+  /* Fix this line */
+  --font-instrument-serif: var(
+    --font-instrument-serif
+  ); /* ensure this exists */
 }
+
 .dark {
   --color-primary: var(--color-neutral-100);
 }
-
-

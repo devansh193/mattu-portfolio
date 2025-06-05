@@ -53,10 +53,7 @@ export const Navbar = () => {
         }}
         className={cn(
           "block md:flex fixed top-0 left-0 right-0 z-50 items-center mx-auto inset-x-0 justify-between rounded-3xl px-3 py-4 md:py-6 text-lg h-16 font-inter my-4",
-          "bg-black/70 backdrop-blur-md text-neutral-200",
-          scrolled
-            ? "md:border md:border-[#1E1E20] md:shadow-lg"
-            : "md:shadow-none"
+          "bg-black/50 backdrop-blur-md text-neutral-200"
         )}
       >
         {/* Hidden on small screens */}
