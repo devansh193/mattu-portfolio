@@ -4,8 +4,8 @@ import { Landing } from "@/modules/main/landing";
 import { Testimonials } from "@/modules/testimonials";
 import { Work } from "@/modules/work";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { About } from "@/modules/about";
 import { Footer } from "@/modules/footer";
+import { About } from "@/modules/about";
 
 export default function Home() {
   const containerRef = useRef(null);

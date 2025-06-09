@@ -3,13 +3,11 @@ import { Box, Settings, Lock, Sparkles, Search } from "lucide-react";
 
 export const Testimonials = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto py-6 mt-4 flex flex-col items-center justify-center">
-      <div>
-        <h1 className="text-lg md:text-2xl font-bold tracking-wide text-[#808080] mb-4">
-          WHAT PEOPLE SAY
-        </h1>
-      </div>
-      <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 text-white">
+    <section className="w-full px-4 md:px-6 lg:px-8 py-16 flex flex-col items-center">
+      <h2 className="text-sm md:text-2xl font-semibold text-neutral-500 mb-5">
+        WHAT PEOPLE SAY
+      </h2>
+      <ul className="grid grid-cols-1 md:grid-cols-12 xl:grid-rows-2 md:grid-rows-3 gap-4 w-full max-w-5xl text-white">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
           icon={<Box className="h-4 w-4 text-white" />}
@@ -45,6 +43,6 @@ export const Testimonials = () => {
           description="Running out of copy so I'll write anything."
         />
       </ul>
-    </div>
+    </section>
   );
 };
