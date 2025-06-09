@@ -59,7 +59,7 @@ export const Work = () => {
   const hasMore = visibleCount < data.length;
 
   return (
-    <section className="flex flex-col items-center justify-start md:mt-12 pt-12 px-4 overflow-hidden w-full">
+    <section className="flex flex-col items-center justify-start md:mt-12 px-4 overflow-hidden w-full">
       <div className="relative z-10 w-full flex flex-col items-center">
         <h1 className="text-lg md:text-2xl font-bold tracking-wide text-[#808080] mb-4">
           WORKS

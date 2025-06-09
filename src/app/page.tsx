@@ -4,6 +4,8 @@ import { Landing } from "@/modules/main/landing";
 import { Testimonials } from "@/modules/testimonials";
 import { Work } from "@/modules/work";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { About } from "@/modules/about";
+import { Footer } from "@/modules/footer";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -24,7 +26,11 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center w-full h-full mt-12 md:mt-0">
         <Landing />
         <Work />
+        <About />
         <Testimonials />
+        <div className="hidden md:block">
+          <Footer />
+        </div>
       </div>
     </div>
   );

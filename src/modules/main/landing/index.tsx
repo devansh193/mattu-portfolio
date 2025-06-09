@@ -1,22 +1,45 @@
-import { AvatarGroup } from "@/components/avatar-circle";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import { sampleAvatars } from "@/data";
+import { Cover } from "@/components/cover";
+import { Button } from "@/components/ui/button";
+import { AvatarGroup } from "@/components/avatar-circle";
 
 export const Landing = () => {
+  const gradientVariants = {
+    animate: {
+      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+      transition: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
   return (
     <div className="flex flex-col items-center justify-center h-screen px-4 py-2 text-center ">
       <div className="relative flex flex-col items-center justify-center h-full max-w-[1000px] mx-auto px-4 text-center gap-y-8">
         {/* Gradient backgrounds with noise overlay */}
-        <div className="absolute inset-0 flex items-center justify-center space-x-12 -z-10 w-full">
-          {/* First gradient with noise */}
-          <div className="relative max-w-xl w-full h-[300px]">
-            <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-black via-[#4118ac] to-black blur-[100px] will-change-transform" />
+        <div className="absolute inset-0 flex items-center justify-center space-x-6 -z-10 w-full">
+          <div className="relative max-w-xl w-full h-[400px]">
+            <motion.div
+              className="absolute inset-0 opacity-40 bg-gradient-to-br from-black via-[#4118ac] to-black blur-[100px] will-change-transform"
+              style={{
+                backgroundSize: "200% 200%",
+              }}
+              variants={gradientVariants}
+              animate="animate"
+            />
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay" />
           </div>
-
-          {/* Second gradient with noise */}
-          <div className="relative max-w-xl w-full h-[300px]">
-            <div className="absolute inset-0 opacity-40 bg-gradient-to-bl from-black via-[#4118ac] to-black blur-[100px] will-change-transform" />
+          <div className="relative max-w-xl w-full h-[400px]">
+            <motion.div
+              className="absolute inset-0 opacity-40 bg-gradient-to-bl from-black via-[#4118ac] to-black blur-[100px] will-change-transform"
+              style={{
+                backgroundSize: "200% 200%",
+              }}
+              variants={gradientVariants}
+              animate="animate"
+            />
             <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-10 mix-blend-overlay" />
           </div>
         </div>
@@ -40,10 +63,11 @@ export const Landing = () => {
         {/* Content */}
         <h1 className="text-neutral-200 text-4xl sm:text-5xl md:text-6xl font-medium text-wrap">
           Partnering with content creators to unlock next level of
-          <span className="text-[#6354f3] font-instrument-serif italic">
-            {" "}
-            growth and success
-          </span>
+          <Cover className="text-[#6354f3] hover:text-[#6354f3] bg-transparent hover:cursor-pointer">
+            <span className="text-[#6354f3] font-instrument-serif italic ml-2">
+              growth and success
+            </span>
+          </Cover>
         </h1>
         <p className="text-neutral-400 font-sans text-md sm:text-lg max-w-2xl leading-relaxed">
           Showcase your talent, convert more clients, and start building your
@@ -58,8 +82,8 @@ export const Landing = () => {
         </Button>
       </div>
 
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="font-semibold text-5xl md:text-6xl lg:text-7xl xl:text-9xl bg-gradient-to-b from-white via-neutral-500 to-neutral-950 bg-clip-text text-transparent font-geist-sans w-full">
+      <div className="hidden md:flex flex-col items-center justify-center">
+        <h1 className="font-semibold text-5xl md:text-6xl lg:text-7xl xl:text-9xl bg-gradient-to-b from-blue-900  to-neutral-950 bg-clip-text text-transparent font-geist-sans w-full">
           work with kuro
         </h1>
         <span className="text-xs sm:text-base md:text-sm font-semibold text-[#808080]">
