@@ -3,6 +3,7 @@ import { sampleAvatars } from "@/data";
 import { Cover } from "@/components/cover";
 import { Button } from "@/components/ui/button";
 import { AvatarGroup } from "@/components/avatar-circle";
+import { ShootingStars } from "@/components/shooting-stars";
 
 export const Landing = () => {
   const gradientVariants = {
@@ -79,6 +80,7 @@ export const Landing = () => {
           Contact Me
         </Button>
       </div>
+      <ShootingStars />
     </div>
   );
 };
