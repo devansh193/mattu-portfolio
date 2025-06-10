@@ -2,42 +2,38 @@
 
 import { useState } from "react";
 import YouTubePlayer from "../youtube/youtube-player";
+// import { StaticGrid } from "@/components/magicui/flickering-grid";
 
 const data = [
   {
     id: 1,
     videoId: "9tjM627dvLk",
     title: "Sample Title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description: "Lorem ipsum...",
   },
   {
     id: 2,
     videoId: "kYLBNEn7KVI",
     title: "Sample Title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description: "Lorem ipsum...",
   },
   {
     id: 3,
     videoId: "Y76PMmZnYQY",
     title: "Sample Title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description: "Lorem ipsum...",
   },
   {
     id: 4,
     videoId: "9i_WVxL2MnQ",
     title: "Sample Title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description: "Lorem ipsum...",
   },
   {
     id: 5,
     videoId: "BoXnzcOdALw",
     title: "Sample Title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    description: "Lorem ipsum...",
   },
   {
     id: 6,
@@ -59,12 +55,21 @@ export const Work = () => {
   const hasMore = visibleCount < data.length;
 
   return (
-    <section className="w-full px-4 md:px-6 lg:px-8 py-12 flex flex-col items-center overflow-hidden">
-      <div className="relative z-10 w-full max-w-6xl flex flex-col items-center">
+    <section className="relative w-full px-4 md:px-6 lg:px-8 flex flex-col items-center overflow-hidden">
+      {/* StaticGrid as background */}
+      {/* <StaticGrid
+        className="absolute inset-0 z-0 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)] h-full w-full"
+        squareSize={4}
+        gridGap={4}
+        color="#60A5FA"
+        maxOpacity={0.5}
+      /> */}
+
+      {/* Content on top of the grid */}
+      <div className="z-20 w-full max-w-6xl flex flex-col items-center">
         <h1 className="text-sm md:text-2xl font-bold tracking-widest text-neutral-500 mb-6 md:mb-8">
           WORKS
         </h1>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-4 w-full max-w-5xl mx-auto">
           {visibleItems.map((item) => (
             <div key={item.id} className="space-y-4">

@@ -1,29 +1,23 @@
 "use client";
-import { useRef } from "react";
+
 import { Landing } from "@/modules/main/landing";
 import { Testimonials } from "@/modules/testimonials";
 import { Work } from "@/modules/work";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { Footer } from "@/modules/footer";
 import { About } from "@/modules/about";
+import { StaticGrid } from "@/components/magicui/flickering-grid"; // Keep this import
 
 export default function Home() {
-  const containerRef = useRef(null);
-  const { scrollY } = useScroll(); // Will track window scroll
-
-  // Optional: Guard against undefined scrollY (especially on SSR)
-  const rotate = useTransform(scrollY, [0, 5000], [30, 360]);
-
   return (
-    <div
-      ref={containerRef}
-      className="relative flex items-center justify-center overflow-hidden"
-    >
-      <motion.div
-        style={{ rotate, originX: 0 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 opacity-40 bg-gradient-to-b from-black   via-[#4118ac] via-50% to-black w-[60%] h-[75%] blur-[100px] rounded-full will-change-transform"
+    <div className="relative min-h-screen overflow-x-hidden">
+      <StaticGrid
+        className="fixed inset-0 z-[-10] [mask-image:radial-gradient(550px_circle_at_center,white,transparent)] h-screen w-screen"
+        squareSize={4}
+        gridGap={4}
+        color="#60A5FA"
+        maxOpacity={0.5}
       />
-      <div className="min-h-screen flex flex-col items-center w-full h-full mt-12 md:mt-0">
+      <div className="relative z-10 flex flex-col items-center w-full">
         <Landing />
         <Work />
         <About />
